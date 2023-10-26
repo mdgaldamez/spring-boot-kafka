@@ -84,7 +84,7 @@ public class MovementService {
       throw new CustomException(400, "12100");
     }
 
-    movement.setBalance(saldo_disponible);
+    movement.setBalance(saldo_disponible + movement.getValue());
     movementRepo.save(movement);
 
     try {
