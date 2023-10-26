@@ -1,0 +1,1247 @@
+{
+	"info": {
+		"_postman_id": "70ac191f-8b48-41c2-8805-772a442991db",
+		"name": "DevSu Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2662325"
+	},
+	"item": [
+		{
+			"name": "Cuenta-Movimiento",
+			"item": [
+				{
+					"name": "Cuentas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/cuentas",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cuentas",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{endpoint}}/cuentas",
+									"host": [
+										"{{endpoint}}"
+									],
+									"path": [
+										"cuentas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Oct 2023 18:08:58 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"numero\": \"478758\",\n        \"tipo\": \"Ahorros\",\n        \"saldoInicial\": 2000,\n        \"estado\": \"True\",\n        \"usuarioId\": 1\n    },\n    {\n        \"numero\": \"225487\",\n        \"tipo\": \"Corriente\",\n        \"saldoInicial\": 100,\n        \"estado\": \"True\",\n        \"usuarioId\": 2\n    },\n    {\n        \"numero\": \"495878\",\n        \"tipo\": \"Ahorros\",\n        \"saldoInicial\": 0,\n        \"estado\": \"True\",\n        \"usuarioId\": 3\n    },\n    {\n        \"numero\": \"496825\",\n        \"tipo\": \"Ahorros\",\n        \"saldoInicial\": 540,\n        \"estado\": \"True\",\n        \"usuarioId\": 2\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Movimientos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/movimientos",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Movimientos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{endpoint}}/movimientos",
+									"host": [
+										"{{endpoint}}"
+									],
+									"path": [
+										"movimientos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Oct 2023 18:09:11 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"date\": \"2023-10-26T17:35:26.000+00:00\",\n        \"type\": \"Retiro\",\n        \"value\": 575,\n        \"balance\": 2000,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T17:54:56.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 100,\n        \"balance\": 2575,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T18:00:46.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 100,\n        \"balance\": 2775,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T18:01:34.000+00:00\",\n        \"type\": \"Retiro\",\n        \"value\": -100,\n        \"balance\": 2675,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Cuenta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/cuentas/478758",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"cuentas",
+								"478758"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cuenta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{endpoint}}/cuentas/478758",
+									"host": [
+										"{{endpoint}}"
+									],
+									"path": [
+										"cuentas",
+										"478758"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Oct 2023 18:08:40 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"numero\": \"478758\",\n    \"tipo\": \"Ahorros\",\n    \"saldoInicial\": 2000,\n    \"estado\": \"True\",\n    \"usuarioId\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Movimientos by Cuenta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/movimientos/478758",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"movimientos",
+								"478758"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Movimiento",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{endpoint}}/movimientos/2",
+									"host": [
+										"{{endpoint}}"
+									],
+									"path": [
+										"movimientos",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Oct 2023 18:09:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"date\": \"2023-10-26T17:54:56.000+00:00\",\n    \"type\": \"Deposito\",\n    \"value\": 100,\n    \"balance\": 2575,\n    \"account\": {\n        \"numero\": \"478758\",\n        \"tipo\": \"Ahorros\",\n        \"saldoInicial\": 2000,\n        \"estado\": \"True\",\n        \"usuarioId\": 1\n    }\n}"
+						},
+						{
+							"name": "Movimiento by cuenta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{endpoint}}/movimientos/478758",
+									"host": [
+										"{{endpoint}}"
+									],
+									"path": [
+										"movimientos",
+										"478758"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Oct 2023 18:42:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"date\": \"2023-10-23T10:00:00.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 575,\n        \"balance\": 2000,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-23T12:00:00.000+00:00\",\n        \"type\": \"Retiro\",\n        \"value\": -575,\n        \"balance\": 2000,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-23T13:00:00.000+00:00\",\n        \"type\": \"Retiro\",\n        \"value\": -575,\n        \"balance\": 2000,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-24T05:00:00.000+00:00\",\n        \"type\": \"Retiro\",\n        \"value\": -575,\n        \"balance\": 2000,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-22T05:00:00.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 575,\n        \"balance\": 4300,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-22T05:00:00.000+00:00\",\n        \"type\": \"Retiro\",\n        \"value\": -300,\n        \"balance\": 4875,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-22T05:00:00.000+00:00\",\n        \"type\": \"Retiro\",\n        \"value\": -300,\n        \"balance\": 4575,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-22T05:00:00.000+00:00\",\n        \"type\": \"Retiro\",\n        \"value\": -300,\n        \"balance\": 4275,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-24T23:13:27.000+00:00\",\n        \"type\": \"Retiro\",\n        \"value\": -900,\n        \"balance\": 3075,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-24T23:13:57.000+00:00\",\n        \"type\": \"Retiro\",\n        \"value\": -900,\n        \"balance\": 3075,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-24T23:16:11.000+00:00\",\n        \"type\": \"Retiro\",\n        \"value\": -900,\n        \"balance\": 2175,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-25T18:27:53.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 500,\n        \"balance\": -2175,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-25T19:13:35.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 500,\n        \"balance\": -1675,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-25T19:21:46.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 500,\n        \"balance\": -1175,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-25T19:31:14.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 500,\n        \"balance\": -675,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-25T19:37:51.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 500,\n        \"balance\": -175,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T07:58:14.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 500,\n        \"balance\": 325,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T08:16:21.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 500,\n        \"balance\": 825,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T08:18:25.000+00:00\",\n        \"type\": \"Retiro\",\n        \"value\": -500,\n        \"balance\": 1325,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T08:22:49.000+00:00\",\n        \"type\": \"Retiro\",\n        \"value\": -500,\n        \"balance\": 825,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T03:26:01.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 500,\n        \"balance\": 325,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T03:26:33.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 500,\n        \"balance\": 825,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T03:30:03.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 500,\n        \"balance\": 1325,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T03:37:30.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 500,\n        \"balance\": 1825,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T03:38:21.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 500,\n        \"balance\": 2325,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T03:40:56.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 500,\n        \"balance\": 2825,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T03:41:23.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 500,\n        \"balance\": 3325,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T03:42:57.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 500,\n        \"balance\": 3825,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T03:49:33.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 500,\n        \"balance\": 4325,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T03:53:45.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 500,\n        \"balance\": 4825,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T03:55:27.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 500,\n        \"balance\": 5325,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T03:58:46.000+00:00\",\n        \"type\": \"Deposito\",\n        \"value\": 500,\n        \"balance\": 5825,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T04:27:01.000+00:00\",\n        \"type\": \"Retiro\",\n        \"value\": -100,\n        \"balance\": 6325,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T04:35:47.000+00:00\",\n        \"type\": \"Retiro\",\n        \"value\": -100,\n        \"balance\": 6225,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T04:39:01.000+00:00\",\n        \"type\": \"Retiro\",\n        \"value\": -100,\n        \"balance\": 6125,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T04:41:08.000+00:00\",\n        \"type\": \"Retiro\",\n        \"value\": -100,\n        \"balance\": 6025,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T09:50:10.000+00:00\",\n        \"type\": \"Retiro\",\n        \"value\": -100,\n        \"balance\": 5925,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    },\n    {\n        \"date\": \"2023-10-26T09:51:31.000+00:00\",\n        \"type\": \"Retiro\",\n        \"value\": -100,\n        \"balance\": 5825,\n        \"account\": {\n            \"numero\": \"478758\",\n            \"tipo\": \"Ahorros\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\",\n            \"usuarioId\": 1\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create Cuenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": \"585545\",\r\n    \"tipo\": \"Corriente\",\r\n    \"saldoInicial\": 1000,\r\n    \"estado\": \"True\",\r\n    \"usuarioId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/cuentas",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Cuenta",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"numero\": \"585545\",\r\n    \"tipo\": \"Corriente\",\r\n    \"saldoInicial\": 1000,\r\n    \"estado\": \"True\",\r\n    \"usuarioId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{endpoint}}/cuentas",
+									"host": [
+										"{{endpoint}}"
+									],
+									"path": [
+										"cuentas"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Oct 2023 19:17:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"numero\": \"585545\",\n    \"tipo\": \"Corriente\",\n    \"saldoInicial\": 1000,\n    \"estado\": \"True\",\n    \"usuarioId\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Movimiento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"type\": \"Retiro\",\r\n        \"value\": -100,\r\n        \"account\": {\r\n            \"numero\": 478758\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/movimientos",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Movimiento",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\r\n        \"type\": \"Retiro\",\r\n        \"value\": -100,\r\n        \"account\": {\r\n            \"numero\": 478758\r\n        }\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{endpoint}}/movimientos",
+									"host": [
+										"{{endpoint}}"
+									],
+									"path": [
+										"movimientos"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Oct 2023 18:59:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"date\": \"2023-10-26T18:59:38.642+00:00\",\n    \"type\": \"Retiro\",\n    \"value\": -100,\n    \"balance\": 2475,\n    \"account\": {\n        \"numero\": \"478758\",\n        \"tipo\": \"Ahorros\",\n        \"saldoInicial\": 2000,\n        \"estado\": \"True\",\n        \"usuarioId\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Cuenta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": \"585545\",\r\n    \"tipo\": \"Corriente\",\r\n    \"saldoInicial\": 1000,\r\n    \"estado\": \"True\",\r\n    \"usuarioId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/cuentas/585545",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"cuentas",
+								"585545"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Cuenta",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"numero\": \"585545\",\r\n    \"tipo\": \"Corriente\",\r\n    \"saldoInicial\": 1000,\r\n    \"estado\": \"True\",\r\n    \"usuarioId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{endpoint}}/cuentas/585545",
+									"host": [
+										"{{endpoint}}"
+									],
+									"path": [
+										"cuentas",
+										"585545"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Oct 2023 19:18:32 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"numero\": \"585545\",\n    \"tipo\": \"Corriente\",\n    \"saldoInicial\": 1000,\n    \"estado\": \"True\",\n    \"usuarioId\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Movimiento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"date\": \"2023-10-21T05:00:00.000+00:00\",\r\n        \"type\": \"Deposito\",\r\n        \"value\": 575.0,\r\n        \"balance\": 2000.0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/movimientos/2",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"movimientos",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Movimiento",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\r\n        \"date\": \"2023-10-21T05:00:00.000+00:00\",\r\n        \"type\": \"Deposito\",\r\n        \"value\": 575.0,\r\n        \"balance\": 2000.0\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{endpoint}}/movimientos/2",
+									"host": [
+										"{{endpoint}}"
+									],
+									"path": [
+										"movimientos",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Oct 2023 19:20:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"date\": \"2023-10-21T05:00:00.000+00:00\",\n    \"type\": \"Deposito\",\n    \"value\": 575,\n    \"balance\": 2000,\n    \"account\": {\n        \"numero\": \"478758\",\n        \"tipo\": \"Ahorros\",\n        \"saldoInicial\": 2000,\n        \"estado\": \"True\",\n        \"usuarioId\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Cuenta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/cuentas/585544",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"cuentas",
+								"585544"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Cuenta Error",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{endpoint}}/cuentas/585544",
+									"host": [
+										"{{endpoint}}"
+									],
+									"path": [
+										"cuentas",
+										"585544"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Oct 2023 19:21:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"12000\",\n    \"message\": \"Cuenta no existe\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Movimiento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/movimientos/1",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"movimientos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/clientes",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Clientes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/clientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"clientes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Oct 2023 16:52:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"Nombres\": \"Jose Lema\",\n        \"Género\": \"Masculino\",\n        \"Edad\": 34,\n        \"Identificación\": \"DNI\",\n        \"Dirección\": \"Otavalo sn y principal\",\n        \"Teléfono\": \"098254785\",\n        \"Cliente Id\": 123456789,\n        \"Contraseña\": \"1234\",\n        \"Estado\": \"True\"\n    },\n    {\n        \"Nombres\": \"Marianela Montalvo\",\n        \"Género\": \"Femenino\",\n        \"Edad\": 30,\n        \"Identificación\": \"DNI\",\n        \"Dirección\": \"Amazonas y NNUU\",\n        \"Teléfono\": \"097548965\",\n        \"Cliente Id\": 234567890,\n        \"Contraseña\": \"5678\",\n        \"Estado\": \"True\"\n    },\n    {\n        \"Nombres\": \"Juan Osorio\",\n        \"Género\": \"Masculino\",\n        \"Edad\": 33,\n        \"Identificación\": \"DNI\",\n        \"Dirección\": \"13 junio y Equinoccial\",\n        \"Teléfono\": \"098874587\",\n        \"Cliente Id\": 345678901,\n        \"Contraseña\": \"1245\",\n        \"Estado\": \"True\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/clientes/123456789",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"clientes",
+								"123456789"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cliente Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/clientes/123456789",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"clientes",
+										"123456789"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Oct 2023 16:53:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Nombres\": \"Jose Lema\",\n    \"Género\": \"Masculino\",\n    \"Edad\": 34,\n    \"Identificación\": \"DNI\",\n    \"Dirección\": \"Otavalo sn y principal\",\n    \"Teléfono\": \"098254785\",\n    \"Cliente Id\": 123456789,\n    \"Contraseña\": \"1234\",\n    \"Estado\": \"True\"\n}"
+						},
+						{
+							"name": "Cliente Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/clientes/123456780",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"clientes",
+										"123456780"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Oct 2023 16:53:58 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nombres\": \"Jose Lema 2\",\r\n    \"Género\": \"Masculino\",\r\n    \"Fecha Nacimiento\": \"1980-05-24\",\r\n    \"Identificación\": \"DNI\",\r\n    \"Dirección\": \"Otavalo sn y principal\",\r\n    \"Teléfono\": \"098254785\",\r\n    \"Cliente Id\": 123456788,\r\n    \"Contraseña\": \"1234\",\r\n    \"Estado\": \"True\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/clientes",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Nombres\": \"Jose Lema 2\",\r\n    \"Género\": \"Masculino\",\r\n    \"Fecha Nacimiento\": \"1980-05-24\",\r\n    \"Identificación\": \"DNI\",\r\n    \"Dirección\": \"Otavalo sn y principal\",\r\n    \"Teléfono\": \"098254785\",\r\n    \"Cliente Id\": 123456788,\r\n    \"Contraseña\": \"1234\",\r\n    \"Estado\": \"True\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{endpoint}}/clientes",
+									"host": [
+										"{{endpoint}}"
+									],
+									"path": [
+										"clientes"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Oct 2023 17:09:27 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Nombres\": \"Jose Lema 2\",\n    \"Género\": \"Masculino\",\n    \"Edad\": 43,\n    \"Identificación\": \"DNI\",\n    \"Dirección\": \"Otavalo sn y principal\",\n    \"Teléfono\": \"098254785\",\n    \"Cliente Id\": 123456788,\n    \"Contraseña\": \"1234\",\n    \"Estado\": \"True\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nombres\": \"Jose Lema Martinez\",\r\n    \"Género\": \"Masculino\",\r\n    \"Fecha Nacimiento\": \"1975-05-24\",\r\n    \"Identificación\": \"DNI\",\r\n    \"Dirección\": \"Otavalo sn y principal\",\r\n    \"Teléfono\": \"098254785\",\r\n    \"Cliente Id\": 123456788,\r\n    \"Contraseña\": \"1234\",\r\n    \"Estado\": \"True\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/clientes/123456788",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"clientes",
+								"123456788"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Nombres\": \"Jose Lema Martinez\",\r\n    \"Género\": \"Masculino\",\r\n    \"Fecha Nacimiento\": \"1975-05-24\",\r\n    \"Identificación\": \"DNI\",\r\n    \"Dirección\": \"Otavalo sn y principal\",\r\n    \"Teléfono\": \"098254785\",\r\n    \"Cliente Id\": 123456788,\r\n    \"Contraseña\": \"1234\",\r\n    \"Estado\": \"True\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{endpoint}}/clientes/123456788",
+									"host": [
+										"{{endpoint}}"
+									],
+									"path": [
+										"clientes",
+										"123456788"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Oct 2023 17:14:33 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Nombres\": \"Jose Lema Martinez\",\n    \"Género\": \"Masculino\",\n    \"Edad\": 48,\n    \"Identificación\": \"DNI\",\n    \"Dirección\": \"Otavalo sn y principal\",\n    \"Teléfono\": \"098254785\",\n    \"Cliente Id\": 123456788,\n    \"Contraseña\": \"1234\",\n    \"Estado\": \"True\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Partial",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nombres\": \"Mario Martinez\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/clientes/123456788",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"clientes",
+								"123456788"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Partial",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Nombres\": \"Mario Martinez\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{endpoint}}/clientes/123456788",
+									"host": [
+										"{{endpoint}}"
+									],
+									"path": [
+										"clientes",
+										"123456788"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Oct 2023 19:54:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Nombres\": \"Mario Martinez\",\n    \"Género\": \"Masculino\",\n    \"Edad\": 48,\n    \"Identificación\": \"DNI\",\n    \"Dirección\": \"Otavalo sn y principal\",\n    \"Teléfono\": \"098254785\",\n    \"Cliente Id\": 123456788,\n    \"Contraseña\": \"1234\",\n    \"Estado\": \"True\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/clientes/123456788",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"clientes",
+								"123456788"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reporte",
+			"item": [
+				{
+					"name": "Reporte rango de fechas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/reportes?fechaInicio=2023-10-26&fechaFin=2023-10-27&clienteId=123456789",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"reportes"
+							],
+							"query": [
+								{
+									"key": "fechaInicio",
+									"value": "2023-10-26"
+								},
+								{
+									"key": "fechaFin",
+									"value": "2023-10-27"
+								},
+								{
+									"key": "clienteId",
+									"value": "123456789"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Reporte rango de fechas",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{endpoint}}/reportes?fechaInicio=2023-10-26&fechaFin=2023-10-27&clienteId=123456789",
+									"host": [
+										"{{endpoint}}"
+									],
+									"path": [
+										"reportes"
+									],
+									"query": [
+										{
+											"key": "fechaInicio",
+											"value": "2023-10-26"
+										},
+										{
+											"key": "fechaFin",
+											"value": "2023-10-27"
+										},
+										{
+											"key": "clienteId",
+											"value": "123456789"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Oct 2023 18:06:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"Fecha\": \"26/10/2023\",\n        \"Cliente\": \"Jose Lema\",\n        \"Numero Cuenta\": \"478758\",\n        \"Tipo\": \"Retiro\",\n        \"Saldo Inicial\": 2000,\n        \"Estado\": \"True\",\n        \"Movimiento\": -575,\n        \"Saldo Disponible\": 1425\n    },\n    {\n        \"Fecha\": \"26/10/2023\",\n        \"Cliente\": \"Jose Lema\",\n        \"Numero Cuenta\": \"478758\",\n        \"Tipo\": \"Deposito\",\n        \"Saldo Inicial\": 2000,\n        \"Estado\": \"True\",\n        \"Movimiento\": 100,\n        \"Saldo Disponible\": 1525\n    },\n    {\n        \"Fecha\": \"26/10/2023\",\n        \"Cliente\": \"Jose Lema\",\n        \"Numero Cuenta\": \"478758\",\n        \"Tipo\": \"Deposito\",\n        \"Saldo Inicial\": 2000,\n        \"Estado\": \"True\",\n        \"Movimiento\": 100,\n        \"Saldo Disponible\": 1625\n    },\n    {\n        \"Fecha\": \"26/10/2023\",\n        \"Cliente\": \"Jose Lema\",\n        \"Numero Cuenta\": \"478758\",\n        \"Tipo\": \"Retiro\",\n        \"Saldo Inicial\": 2000,\n        \"Estado\": \"True\",\n        \"Movimiento\": -100,\n        \"Saldo Disponible\": 1525\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
