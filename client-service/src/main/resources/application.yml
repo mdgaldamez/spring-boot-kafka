@@ -1,0 +1,8 @@
+server:
+  port: 8082
+spring:
+  kafka:
+    consumer:
+      group-id: client
+      auto-offset-reset: earliest
+      bootstrap-servers: kafka:9092
