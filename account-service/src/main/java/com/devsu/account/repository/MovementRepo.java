@@ -10,4 +10,7 @@ import java.util.List;
 public interface MovementRepo extends JpaRepository<Movimiento, Integer> {
   @Query(nativeQuery = true)
   List<DetalleMovimiento> findMovementsByClienteIdAndFecha(int clienteId, String fechaInicio, String fechaFin);
+
+  @Query(value = "SELECT * FROM test.movimiento WHERE cuenta_id = :cuentaId", nativeQuery = true)
+  List<Movimiento> findByCuentaId(int cuentaId);
 }

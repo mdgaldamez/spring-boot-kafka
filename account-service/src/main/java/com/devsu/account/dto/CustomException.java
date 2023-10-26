@@ -16,7 +16,8 @@ public class CustomException extends Exception {
     ERROR_CODES.put("12100", "Saldo no disponible");
     ERROR_CODES.put("12200", "Error inesperado");
     ERROR_CODES.put("12300", "Numero de cuenta ya existe");
-    ERROR_CODES.put("12400", "Movimiento no existe");
+    ERROR_CODES.put("12400", "Cuenta no tiene movimientos");
+    ERROR_CODES.put("12500", "Movimiento no existe");
   }
 
   private final int httpCode;

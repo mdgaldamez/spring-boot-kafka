@@ -43,6 +43,14 @@ public class MovementService {
     return movementRepo.findById(id).orElse(null);
   }
 
+  public List<Movimiento> getByNumeroCuenta(String numeroCuenta) throws CustomException {
+    Cuenta account = accountRepo.findByNumero(numeroCuenta);
+    if (account == null) {
+      throw new CustomException(404, "12000");
+    }
+    return movementRepo.findByCuentaId(account.getId());
+  }
+
   public List<DetalleMovimiento> findMovementsByClienteIdAndFecha(int clienteId, String fechaInicio, String fechaFin) throws CustomException {
     List<DetalleMovimiento> movimientos = null;
     try {
@@ -106,7 +114,7 @@ public class MovementService {
   public Movimiento update(int movementId, Movimiento updatedMovement) throws CustomException {
     Movimiento existingMovement = getById(movementId);
     if (existingMovement == null) {
-      throw new CustomException(404, "12400");
+      throw new CustomException(404, "12500");
     }
 
     existingMovement.setBalance(updatedMovement.getBalance());

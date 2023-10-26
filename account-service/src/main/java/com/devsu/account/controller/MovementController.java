@@ -23,12 +23,12 @@ public class MovementController {
     return ResponseEntity.ok(movements);
   }
 
-  @GetMapping("/{id}")
-  public ResponseEntity<Movimiento> getById(@PathVariable int id) {
+  @GetMapping("/{numeroCuenta}")
+  public ResponseEntity<List<Movimiento>> getByNumeroCuenta(@PathVariable String numeroCuenta) {
     try {
-      Movimiento movement = movementService.getById(id);
-      if (movement != null) {
-        return ResponseEntity.ok(movement);
+      List<Movimiento> movements = movementService.getByNumeroCuenta(numeroCuenta);
+      if (movements != null && !movements.isEmpty()) {
+        return ResponseEntity.ok(movements);
       } else {
         throw new CustomException(404, "12400");
       }

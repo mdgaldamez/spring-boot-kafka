@@ -29,7 +29,7 @@ public class AccountController {
       if (account != null) {
         return ResponseEntity.ok(account);
       } else {
-        throw new CustomException(404, "12500");
+        throw new CustomException(404, "12000");
       }
     } catch (CustomException e) {
       return e.buildGenericResponse();
